@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Sprint Name"
+        android:ems="10"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="130dp"
+        android:id="@+id/editText_getsprintName" />
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:hint="Start date"
+        android:layout_alignStart="@+id/editText_getsprintName"
+        android:layout_below="@+id/editText_getsprintName"
+        android:layout_marginTop="20dp"
+        android:id="@+id/editText_getsprintStartDate" />
+
+    <Spinner
+        android:id="@+id/spinner_folder"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_getsprintStartDate"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/editText_getsprintStartDate"
+        />
+    <!--<EditText-->
+    <!--android:layout_width="220dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:inputType="date"-->
+    <!--android:ems="10"-->
+    <!--android:hint="Sprint Folder \n (uncategorized)"-->
+    <!--android:layout_below="@+id/editText_getsprintStartDate"-->
+    <!--android:layout_alignStart="@id/editText_getsprintStartDate"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:id="@+id/editText_getsprintFolder" />-->
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Add contributors"
+        android:layout_below="@+id/editText_getsprintStartDate"
+        android:layout_alignStart="@id/editText_getsprintStartDate"
+        android:layout_marginTop="80dp"
+        android:id="@+id/editText_getsprintContributors" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_getsprintContributors"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/button_saveNewSprint" />
+
+
+</RelativeLayout>

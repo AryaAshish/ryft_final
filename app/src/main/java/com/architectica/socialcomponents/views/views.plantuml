@@ -1,0 +1,393 @@
+@startuml
+
+title __VIEWS's Class Diagram__\n
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.CircularImageView {
+          {static} - DEFAULT_BORDER_WIDTH : float
+          {static} - DEFAULT_SHADOW_RADIUS : float
+          {static} - SCALE_TYPE : ScaleType
+          - borderWidth : float
+          - canvasSize : int
+          - drawable : Drawable
+          - image : Bitmap
+          - paint : Paint
+          - paintBorder : Paint
+          - shadowColor : int
+          - shadowRadius : float
+          + CircularImageView()
+          + CircularImageView()
+          + CircularImageView()
+          + addShadow()
+          + getScaleType()
+          + onDraw()
+          + setBorderColor()
+          + setBorderWidth()
+          + setScaleType()
+          + setShadowColor()
+          + setShadowRadius()
+          # onMeasure()
+          # onSizeChanged()
+          - cropBitmap()
+          - drawShadow()
+          - drawableToBitmap()
+          - init()
+          - loadBitmap()
+          - measureHeight()
+          - measureWidth()
+          - updateShader()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.ExpandableTextView {
+          # mButton : TextView
+          # mTv : TextView
+          {static} - COLLAPS_BUTTON_TEXT : String
+          {static} - DEFAULT_ANIM_ALPHA_START : float
+          {static} - DEFAULT_ANIM_DURATION : int
+          {static} - EXPAND_BUTTON_TEXT : String
+          {static} - MAX_COLLAPSED_LINES : int
+          {static} - TAG : String
+          - mAnimAlphaStart : float
+          - mAnimating : boolean
+          - mAnimationDuration : int
+          - mCollapseText : String
+          - mCollapsed : boolean
+          - mCollapsedHeight : int
+          - mCollapsedStatus : SparseBooleanArray
+          - mExpandText : String
+          - mMarginBetweenTxtAndBottom : int
+          - mMaxCollapsedLines : int
+          - mPosition : int
+          - mRelayout : boolean
+          - mTextHeightWithMaxLines : int
+          + ExpandableTextView()
+          + ExpandableTextView()
+          + ExpandableTextView()
+          + getText()
+          + onClick()
+          + onInterceptTouchEvent()
+          + setOnExpandStateChangeListener()
+          + setOrientation()
+          + setText()
+          + setText()
+          # onFinishInflate()
+          # onMeasure()
+          {static} - applyAlphaAnimation()
+          - findViews()
+          {static} - getRealTextViewHeight()
+          - init()
+          {static} - isPostHoneycomb()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.ExpandableTextView.ExpandCollapseAnimation {
+          - mEndHeight : int
+          - mStartHeight : int
+          - mTargetView : View
+          + ExpandCollapseAnimation()
+          + initialize()
+          + willChangeBounds()
+          # applyTransformation()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      interface com.architectica.socialcomponents.views.ExpandableTextView.OnExpandStateChangeListener {
+          {abstract} + onExpandStateChanged()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.FollowButton {
+          {static} + FOLLOWING_STATE : int
+          {static} + FOLLOW_BACK_STATE : int
+          {static} + FOLLOW_STATE : int
+          {static} + INVISIBLE_STATE : int
+          {static} + TAG : String
+          - state : int
+          + FollowButton()
+          + FollowButton()
+          + FollowButton()
+          + getState()
+          + setState()
+          + updateButtonState()
+          - init()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.SwipeRefreshPreLollyPop {
+          + SwipeRefreshPreLollyPop()
+          + SwipeRefreshPreLollyPop()
+          - init()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.TouchImageView {
+          {static} - DEBUG : String
+          {static} - SUPER_MAX_MULTIPLIER : float
+          {static} - SUPER_MIN_MULTIPLIER : float
+          - context : Context
+          - doubleTapListener : OnDoubleTapListener
+          - imageRenderedAtLeastOnce : boolean
+          - m : float[]
+          - mGestureDetector : GestureDetector
+          - mScaleDetector : ScaleGestureDetector
+          - mScaleType : ScaleType
+          - matchViewHeight : float
+          - matchViewWidth : float
+          - matrix : Matrix
+          - maxScale : float
+          - minScale : float
+          - normalizedScale : float
+          - onDrawReady : boolean
+          - prevMatchViewHeight : float
+          - prevMatchViewWidth : float
+          - prevMatrix : Matrix
+          - prevViewHeight : int
+          - prevViewWidth : int
+          - superMaxScale : float
+          - superMinScale : float
+          - userTouchListener : OnTouchListener
+          - viewHeight : int
+          - viewWidth : int
+          + TouchImageView()
+          + TouchImageView()
+          + TouchImageView()
+          + canScrollHorizontally()
+          + canScrollHorizontallyFroyo()
+          + getCurrentZoom()
+          + getMaxZoom()
+          + getMinZoom()
+          + getScaleType()
+          + getScrollPosition()
+          + getZoomedRect()
+          + isZoomed()
+          + onConfigurationChanged()
+          + onRestoreInstanceState()
+          + onSaveInstanceState()
+          + resetZoom()
+          + setImageBitmap()
+          + setImageDrawable()
+          + setImageResource()
+          + setImageURI()
+          + setMaxZoom()
+          + setMinZoom()
+          + setOnDoubleTapListener()
+          + setOnTouchImageViewListener()
+          + setOnTouchListener()
+          + setScaleType()
+          + setScrollPosition()
+          + setZoom()
+          + setZoom()
+          + setZoom()
+          + setZoom()
+          # onDraw()
+          # onMeasure()
+          - compatPostOnAnimation()
+          - fitImageToView()
+          - fixScaleTrans()
+          - fixTrans()
+          - getFixDragTrans()
+          - getFixTrans()
+          - getImageHeight()
+          - getImageWidth()
+          - printMatrixInfo()
+          - savePreviousImageValues()
+          - scaleImage()
+          - setState()
+          - setViewSize()
+          - sharedConstructing()
+          - transformCoordBitmapToTouch()
+          - transformCoordTouchToBitmap()
+          - translateMatrixAfterRotate()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.TouchImageView.CompatScroller {
+          ~ isPreGingerbread : boolean
+          ~ overScroller : OverScroller
+          ~ scroller : Scroller
+          + CompatScroller()
+          + computeScrollOffset()
+          + fling()
+          + forceFinished()
+          + getCurrX()
+          + getCurrY()
+          + isFinished()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.TouchImageView.DoubleTapZoom {
+          {static} - ZOOM_TIME : float
+          - bitmapX : float
+          - bitmapY : float
+          - endTouch : PointF
+          - interpolator : AccelerateDecelerateInterpolator
+          - startTime : long
+          - startTouch : PointF
+          - startZoom : float
+          - stretchImageToSuper : boolean
+          - targetZoom : float
+          + run()
+          ~ DoubleTapZoom()
+          - calculateDeltaScale()
+          - interpolate()
+          - translateImageToCenterTouchPosition()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.TouchImageView.Fling {
+          ~ currX : int
+          ~ currY : int
+          + cancelFling()
+          + run()
+          ~ Fling()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.TouchImageView.GestureListener {
+          + onDoubleTap()
+          + onDoubleTapEvent()
+          + onFling()
+          + onLongPress()
+          + onSingleTapConfirmed()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      interface com.architectica.socialcomponents.views.TouchImageView.OnTouchImageViewListener {
+          {abstract} + onMove()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.TouchImageView.PrivateOnTouchListener {
+          - last : PointF
+          + onTouch()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.TouchImageView.ScaleListener {
+          + onScale()
+          + onScaleBegin()
+          + onScaleEnd()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      enum State {
+        ANIMATE_ZOOM
+        DRAG
+        FLING
+        NONE
+        ZOOM
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.TouchImageView.ZoomVariables {
+          + focusX : float
+          + focusY : float
+          + scale : float
+          + scaleType : ScaleType
+          + ZoomVariables()
+      }
+    }
+  }
+  
+
+  com.architectica.socialcomponents.views.CircularImageView -up-|> android.widget.ImageView
+  com.architectica.socialcomponents.views.ExpandableTextView .up.|> android.view.View.OnClickListener
+  com.architectica.socialcomponents.views.ExpandableTextView -up-|> android.widget.LinearLayout
+  com.architectica.socialcomponents.views.ExpandableTextView o-- com.architectica.socialcomponents.views.ExpandableTextView.OnExpandStateChangeListener : mListener
+  com.architectica.socialcomponents.views.ExpandableTextView +-down- com.architectica.socialcomponents.views.ExpandableTextView.ExpandCollapseAnimation
+  com.architectica.socialcomponents.views.ExpandableTextView +-down- com.architectica.socialcomponents.views.ExpandableTextView.OnExpandStateChangeListener
+  com.architectica.socialcomponents.views.ExpandableTextView.ExpandCollapseAnimation -up-|> android.view.animation.Animation
+  com.architectica.socialcomponents.views.FollowButton -up-|> android.support.v7.widget.AppCompatButton
+  com.architectica.socialcomponents.views.SwipeRefreshPreLollyPop -up-|> android.support.v4.widget.SwipeRefreshLayout
+  com.architectica.socialcomponents.views.TouchImageView -up-|> android.widget.ImageView
+  com.architectica.socialcomponents.views.TouchImageView o-- com.architectica.socialcomponents.views.TouchImageView.ZoomVariables : delayedZoomVariables
+  com.architectica.socialcomponents.views.TouchImageView o-- com.architectica.socialcomponents.views.TouchImageView.Fling : fling
+  com.architectica.socialcomponents.views.TouchImageView o-- com.architectica.socialcomponents.views.TouchImageView.State : state
+  com.architectica.socialcomponents.views.TouchImageView o-- com.architectica.socialcomponents.views.TouchImageView.OnTouchImageViewListener : touchImageViewListener
+  com.architectica.socialcomponents.views.TouchImageView +-down- com.architectica.socialcomponents.views.TouchImageView.CompatScroller
+  com.architectica.socialcomponents.views.TouchImageView +-down- com.architectica.socialcomponents.views.TouchImageView.DoubleTapZoom
+  com.architectica.socialcomponents.views.TouchImageView +-down- com.architectica.socialcomponents.views.TouchImageView.Fling
+  com.architectica.socialcomponents.views.TouchImageView +-down- com.architectica.socialcomponents.views.TouchImageView.GestureListener
+  com.architectica.socialcomponents.views.TouchImageView +-down- com.architectica.socialcomponents.views.TouchImageView.OnTouchImageViewListener
+  com.architectica.socialcomponents.views.TouchImageView +-down- com.architectica.socialcomponents.views.TouchImageView.PrivateOnTouchListener
+  com.architectica.socialcomponents.views.TouchImageView +-down- com.architectica.socialcomponents.views.TouchImageView.ScaleListener
+  com.architectica.socialcomponents.views.TouchImageView +-down- com.architectica.socialcomponents.views.TouchImageView.State
+  com.architectica.socialcomponents.views.TouchImageView +-down- com.architectica.socialcomponents.views.TouchImageView.ZoomVariables
+  com.architectica.socialcomponents.views.TouchImageView.DoubleTapZoom .up.|> java.lang.Runnable
+  com.architectica.socialcomponents.views.TouchImageView.Fling .up.|> java.lang.Runnable
+  com.architectica.socialcomponents.views.TouchImageView.Fling o-- com.architectica.socialcomponents.views.TouchImageView.CompatScroller : scroller
+  com.architectica.socialcomponents.views.TouchImageView.GestureListener -up-|> android.view.GestureDetector.SimpleOnGestureListener
+  com.architectica.socialcomponents.views.TouchImageView.PrivateOnTouchListener .up.|> android.view.View.OnTouchListener
+  com.architectica.socialcomponents.views.TouchImageView.ScaleListener -up-|> android.view.ScaleGestureDetector.SimpleOnScaleGestureListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

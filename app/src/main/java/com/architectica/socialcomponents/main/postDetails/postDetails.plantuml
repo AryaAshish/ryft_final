@@ -1,0 +1,196 @@
+@startuml
+
+title __POSTDETAILS's Class Diagram__\n
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace etails {
+        class com.architectica.socialcomponents.main.postDetails.PostDetailsActivity {
+            {static} + AUTHOR_ANIMATION_NEEDED_EXTRA_KEY : String
+            {static} + POST_ID_EXTRA_KEY : String
+            {static} + POST_STATUS_EXTRA_KEY : String
+            {static} + UPDATE_POST_REQUEST : int
+            ~ authorAnimatorListener : AnimatorListener
+            - authorAnimationInProgress : boolean
+            - authorImageView : ImageView
+            - authorTextView : TextView
+            - commentEditText : EditText
+            - commentsCountTextView : TextView
+            - commentsLabel : TextView
+            - commentsProgressBar : ProgressBar
+            - commentsRecyclerView : RecyclerView
+            - complainActionMenuItem : MenuItem
+            - dateTextView : TextView
+            - deleteActionMenuItem : MenuItem
+            - descriptionEditText : TextView
+            - editActionMenuItem : MenuItem
+            - isAuthorAnimationRequired : boolean
+            - isEnterTransitionFinished : boolean
+            - likeCounterTextView : TextView
+            - likesContainer : ViewGroup
+            - likesImageView : ImageView
+            - mActionMode : ActionMode
+            - postId : String
+            - postImageView : ImageView
+            - progressBar : ProgressBar
+            - scrollView : ScrollView
+            - sendButton : Button
+            - titleTextView : TextView
+            - warningCommentsTextView : TextView
+            - watcherCounterTextView : TextView
+            + clearCommentField()
+            + createPresenter()
+            + dispatchTouchEvent()
+            + getCommentText()
+            + initLikeButtonState()
+            + initLikeController()
+            + loadAuthorPhoto()
+            + loadPostDetailImage()
+            + onBackPressed()
+            + onCommentChanged()
+            + onCommentsListChanged()
+            + onCreateOptionsMenu()
+            + onOptionsItemSelected()
+            + onPostRemoved()
+            + openEditPostActivity()
+            + openImageDetailScreen()
+            + openProfileActivity()
+            + scrollToFirstComment()
+            + setAuthorName()
+            + setDescription()
+            + setTitle()
+            + showCommentProgress()
+            + showCommentsLabel()
+            + showCommentsRecyclerView()
+            + showCommentsWarning()
+            + showComplainMenuAction()
+            + showDeleteMenuAction()
+            + showEditMenuAction()
+            + updateCounters()
+            # onCreate()
+            # onDestroy()
+            - incrementWatchersCount()
+            - initListeners()
+            - initRecyclerView()
+            - openEditCommentDialog()
+            - scheduleStartPostponedTransition()
+            - startActionMode()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace etails {
+        class com.architectica.socialcomponents.main.postDetails.PostDetailsActivity.ActionModeCallback {
+            + onActionItemClicked()
+            + onCreateActionMode()
+            + onDestroyActionMode()
+            + onPrepareActionMode()
+            ~ ActionModeCallback()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace etails {
+        class com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter {
+            {static} - TIME_OUT_LOADING_COMMENTS : int
+            - attemptToLoadComments : boolean
+            - isPostExist : boolean
+            - postRemovingProcess : boolean
+            + attemptToRemovePost()
+            + doComplainAction()
+            + editPostAction()
+            + getCommentsList()
+            + getPost()
+            + hasAccessToEditComment()
+            + hasAccessToModifyPost()
+            + isPostExist()
+            + loadPost()
+            + onAuthorClick()
+            + onPostImageClick()
+            + onSendButtonClick()
+            + removeComment()
+            + updateComment()
+            + updateCommentsVisibility()
+            + updateOptionMenuVisibility()
+            ~ PostDetailsPresenter()
+            - addComplain()
+            - createOrUpdateComment()
+            - fillInUI()
+            - initLikeButtonState()
+            - loadAuthorProfile()
+            - openComplainDialog()
+            - openConfirmDeletingDialog()
+            - removePost()
+            - runHidingCommentProgressByTimeOut()
+            - sendComment()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace etails {
+        interface com.architectica.socialcomponents.main.postDetails.PostDetailsView {
+            {abstract} + clearCommentField()
+            {abstract} + getCommentText()
+            {abstract} + initLikeButtonState()
+            {abstract} + initLikeController()
+            {abstract} + loadAuthorPhoto()
+            {abstract} + loadPostDetailImage()
+            {abstract} + onCommentsListChanged()
+            {abstract} + onPostRemoved()
+            {abstract} + openEditPostActivity()
+            {abstract} + openImageDetailScreen()
+            {abstract} + openProfileActivity()
+            {abstract} + scrollToFirstComment()
+            {abstract} + setAuthorName()
+            {abstract} + setDescription()
+            {abstract} + setTitle()
+            {abstract} + showCommentProgress()
+            {abstract} + showCommentsLabel()
+            {abstract} + showCommentsRecyclerView()
+            {abstract} + showCommentsWarning()
+            {abstract} + showComplainMenuAction()
+            {abstract} + showDeleteMenuAction()
+            {abstract} + showEditMenuAction()
+            {abstract} + updateCounters()
+        }
+      }
+    }
+  }
+  
+
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity .up.|> com.architectica.socialcomponents.dialogs.EditCommentDialog.CommentDialogCallback
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity .up.|> com.architectica.socialcomponents.main.postDetails.PostDetailsView
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity o-- com.architectica.socialcomponents.adapters.CommentsAdapter : commentsAdapter
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity o-- com.architectica.socialcomponents.controllers.LikeController : likeController
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity +-down- com.architectica.socialcomponents.main.postDetails.PostDetailsActivity.ActionModeCallback
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity.ActionModeCallback .up.|> android.support.v7.view.ActionMode.Callback
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity.ActionModeCallback o-- com.architectica.socialcomponents.model.Comment : selectedComment
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter o-- com.architectica.socialcomponents.managers.CommentManager : commentManager
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter o-- com.architectica.socialcomponents.model.Post : post
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

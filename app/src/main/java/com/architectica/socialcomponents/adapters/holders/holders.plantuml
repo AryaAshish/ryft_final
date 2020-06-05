@@ -1,0 +1,144 @@
+@startuml
+
+title __HOLDERS's Class Diagram__\n
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.CommentViewHolder {
+            - avatarImageView : ImageView
+            - context : Context
+            - dateTextView : TextView
+            + CommentViewHolder()
+            + bindData()
+            - createOnProfileChangeListener()
+            - fillComment()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.FollowPostViewHolder {
+            + FollowPostViewHolder()
+            + FollowPostViewHolder()
+            + bindData()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.LoadViewHolder {
+            + LoadViewHolder()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.PostViewHolder {
+            {static} + TAG : String
+            # context : Context
+            - authorImageView : ImageView
+            - commentsCountTextView : TextView
+            - dateTextView : TextView
+            - detailsTextView : TextView
+            - likeCounterTextView : TextView
+            - likeViewGroup : ViewGroup
+            - likesImageView : ImageView
+            - postImageView : ImageView
+            - titleTextView : TextView
+            - watcherCounterTextView : TextView
+            + PostViewHolder()
+            + PostViewHolder()
+            + bindData()
+            - createOnLikeObjectExistListener()
+            - createProfileChangeListener()
+            - removeNewLinesDividers()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        interface com.architectica.socialcomponents.adapters.holders.PostViewHolder.OnClickListener {
+            {abstract} + onAuthorClick()
+            {abstract} + onItemClick()
+            {abstract} + onLikeClick()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.UserViewHolder {
+            {static} + TAG : String
+            - activity : Activity
+            - context : Context
+            - nameTextView : TextView
+            - photoImageView : ImageView
+            + UserViewHolder()
+            + bindData()
+            + bindData()
+            # fillInProfileFields()
+            - createProfileChangeListener()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        interface com.architectica.socialcomponents.adapters.holders.UserViewHolder.Callback {
+            {abstract} + onFollowButtonClick()
+            {abstract} + onItemClick()
+        }
+      }
+    }
+  }
+  
+
+  com.architectica.socialcomponents.adapters.holders.CommentViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.holders.CommentViewHolder o-- com.architectica.socialcomponents.adapters.CommentsAdapter.Callback : callback
+  com.architectica.socialcomponents.adapters.holders.CommentViewHolder o-- com.architectica.socialcomponents.views.ExpandableTextView : commentTextView
+  com.architectica.socialcomponents.adapters.holders.CommentViewHolder o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.adapters.holders.FollowPostViewHolder -up-|> com.architectica.socialcomponents.adapters.holders.PostViewHolder
+  com.architectica.socialcomponents.adapters.holders.LoadViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder o-- com.architectica.socialcomponents.main.base.BaseActivity : baseActivity
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder o-- com.architectica.socialcomponents.controllers.LikeController : likeController
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder +-down- com.architectica.socialcomponents.adapters.holders.PostViewHolder.OnClickListener
+  com.architectica.socialcomponents.adapters.holders.UserViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.holders.UserViewHolder o-- com.architectica.socialcomponents.views.FollowButton : followButton
+  com.architectica.socialcomponents.adapters.holders.UserViewHolder o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.adapters.holders.UserViewHolder +-down- com.architectica.socialcomponents.adapters.holders.UserViewHolder.Callback
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

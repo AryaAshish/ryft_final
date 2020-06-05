@@ -1,0 +1,206 @@
+@startuml
+
+title __MANAGERS's Class Diagram__\n
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.CommentManager {
+          {static} - TAG : String
+          - context : Context
+          {static} - instance : CommentManager
+          + createOrUpdateComment()
+          + decrementCommentsCount()
+          + getCommentsList()
+          {static} + getInstance()
+          + removeComment()
+          + updateComment()
+          - CommentManager()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.DatabaseHelper {
+          {static} + FOLLOWERS_DB_KEY : String
+          {static} + FOLLOWINGS_DB_KEY : String
+          {static} + FOLLOWINGS_POSTS_DB_KEY : String
+          {static} + FOLLOW_DB_KEY : String
+          {static} + IMAGES_MEDIUM_KEY : String
+          {static} + IMAGES_SMALL_KEY : String
+          {static} + IMAGES_STORAGE_KEY : String
+          {static} + POSTS_DB_KEY : String
+          {static} + POST_COMMENTS_DB_KEY : String
+          {static} + POST_LIKES_DB_KEY : String
+          {static} + PROFILES_DB_KEY : String
+          {static} + TAG : String
+          ~ storage : FirebaseStorage
+          - activeListeners : Map<ValueEventListener, DatabaseReference>
+          - context : Context
+          - database : FirebaseDatabase
+          {static} - instance : DatabaseHelper
+          + addActiveListener()
+          + closeAllActiveListeners()
+          + closeListener()
+          + getDatabaseReference()
+          {static} + getInstance()
+          + getMediumImageStorageRef()
+          + getOriginImageStorageRef()
+          + getSmallImageStorageRef()
+          + getStorageReference()
+          + init()
+          + removeImage()
+          + uploadImage()
+          - DatabaseHelper()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.FirebaseListenersManager {
+          ~ activeListeners : Map<Context, List<ValueEventListener>>
+          + closeListeners()
+          ~ addListenerToMap()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.FollowManager {
+          {static} - TAG : String
+          - context : Context
+          {static} - instance : FollowManager
+          + checkFollowState()
+          + doIFollowUser()
+          + doesUserFollowMe()
+          + followUser()
+          + getFollowersCount()
+          + getFollowersIdsList()
+          + getFollowingsCount()
+          + getFollowingsIdsList()
+          {static} + getInstance()
+          + unfollowUser()
+          - FollowManager()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      interface com.architectica.socialcomponents.managers.FollowManager.CheckStateListener {
+          {abstract} + onStateReady()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.PostManager {
+          {static} - TAG : String
+          - context : Context
+          {static} - instance : PostManager
+          - newPostsCounter : int
+          + addComplain()
+          + clearNewPostsCounter()
+          + createOrUpdatePost()
+          + createOrUpdatePostWithImage()
+          + createPost()
+          + filterByLikes()
+          + getAdminPostsList()
+          + getFollowingPosts()
+          {static} + getInstance()
+          + getNewPostsCounter()
+          + getOriginImageStorageRef()
+          + getPost()
+          + getPostsList()
+          + getPostsListByUser()
+          + getSinglePostValue()
+          + getSmallImageStorageRef()
+          + hasCurrentUserLike()
+          + hasCurrentUserLikeSingleValue()
+          + incrementNewPostsCounter()
+          + incrementWatchersCount()
+          + isPostExistSingleValue()
+          + loadImageMediumSize()
+          + loadImageMediumSize()
+          + removePost()
+          + searchByTitle()
+          + setPostCounterWatcher()
+          - PostManager()
+          - getMediumImageStorageRef()
+          - notifyPostCounterWatcher()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      interface com.architectica.socialcomponents.managers.PostManager.OnImageRequestListener {
+          {abstract} + onImageRequestFinished()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      interface com.architectica.socialcomponents.managers.PostManager.PostCounterWatcher {
+          {abstract} + onPostCounterChanged()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.ProfileManager {
+          {static} - TAG : String
+          - context : Context
+          {static} - instance : ProfileManager
+          + addRegistrationToken()
+          + buildProfile()
+          + checkProfile()
+          + createOrUpdateProfile()
+          + createOrUpdateProfile()
+          {static} + getInstance()
+          + getProfileSingleValue()
+          + getProfileValue()
+          + isProfileExist()
+          + search()
+          + searchBySkill()
+          - ProfileManager()
+      }
+    }
+  }
+  
+
+  com.architectica.socialcomponents.managers.CommentManager -up-|> com.architectica.socialcomponents.managers.FirebaseListenersManager
+  com.architectica.socialcomponents.managers.CommentManager o-- com.architectica.socialcomponents.main.interactors.CommentInteractor : commentInteractor
+  com.architectica.socialcomponents.managers.FollowManager -up-|> com.architectica.socialcomponents.managers.FirebaseListenersManager
+  com.architectica.socialcomponents.managers.FollowManager o-- com.architectica.socialcomponents.main.interactors.FollowInteractor : followInteractor
+  com.architectica.socialcomponents.managers.FollowManager +-down- com.architectica.socialcomponents.managers.FollowManager.CheckStateListener
+  com.architectica.socialcomponents.managers.PostManager -up-|> com.architectica.socialcomponents.managers.FirebaseListenersManager
+  com.architectica.socialcomponents.managers.PostManager o-- com.architectica.socialcomponents.managers.PostManager.PostCounterWatcher : postCounterWatcher
+  com.architectica.socialcomponents.managers.PostManager o-- com.architectica.socialcomponents.main.interactors.PostInteractor : postInteractor
+  com.architectica.socialcomponents.managers.PostManager +-down- com.architectica.socialcomponents.managers.PostManager.OnImageRequestListener
+  com.architectica.socialcomponents.managers.PostManager +-down- com.architectica.socialcomponents.managers.PostManager.PostCounterWatcher
+  com.architectica.socialcomponents.managers.ProfileManager -up-|> com.architectica.socialcomponents.managers.FirebaseListenersManager
+  com.architectica.socialcomponents.managers.ProfileManager o-- com.architectica.socialcomponents.main.interactors.ProfileInteractor : profileInteractor
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

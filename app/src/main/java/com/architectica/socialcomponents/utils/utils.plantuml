@@ -1,0 +1,220 @@
+@startuml
+
+title __UTILS's Class Diagram__\n
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.AnimationUtils {
+          {static} + ALPHA_SHORT_DURATION : int
+          {static} + DEFAULT_DELAY : int
+          {static} + SHORT_DURATION : int
+          {static} + hideViewByAlpha()
+          {static} + hideViewByScale()
+          {static} + hideViewByScaleAndVisibility()
+          {static} + isViewHiddenByScale()
+          {static} + showViewByScale()
+          {static} + showViewByScaleAndVisibility()
+          {static} + showViewByScaleWithoutDelay()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.CustomAppGlideModule {
+          + registerComponents()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.FormatterUtil {
+          {static} + NOW_TIME_RANGE : long
+          {static} + dateTime : String
+          {static} + firebaseDBDate : String
+          {static} + firebaseDBDay : String
+          {static} + formatDateTime()
+          {static} + formatFirebaseDay()
+          {static} + getFirebaseDateFormat()
+          {static} + getRelativeTimeSpanString()
+          {static} + getRelativeTimeSpanStringShort()
+          {static} - formatDuration()
+          {static} - shortFormatEventDay()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.GoogleApiHelper {
+          {static} + createGoogleApiClient()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.ImageUtil {
+          {static} + TAG : String
+          {static} + generateImageTitle()
+          {static} + generatePostImageTitle()
+          {static} + loadBitmap()
+          {static} + loadImage()
+          {static} + loadImage()
+          {static} + loadImage()
+          {static} + loadImageCenterCrop()
+          {static} + loadImageCenterCrop()
+          {static} + loadImageCenterCrop()
+          {static} + loadImageCenterCrop()
+          {static} + loadImageCenterCrop()
+          {static} + loadImageCenterCrop()
+          {static} + loadImageWithSimpleTarget()
+          {static} + loadImageWithSimpleTarget()
+          {static} + loadLocalImage()
+          {static} + loadMediumImageCenterCrop()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.ImagesDir {
+          {static} - TEMP_IMAGES_PATH : String
+          {static} - imagesTempDir : File
+          {static} + cleanDirs()
+          {static} + getTempImagesDir()
+          {static} + isTempImagesDir()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.LogUtil {
+          {static} - DEBUG_ENABLED : boolean
+          {static} - INFO_ENABLED : boolean
+          {static} - LOG_MAPS_TILE_SEARCH : boolean
+          {static} - TIMING : String
+          {static} - TIMING_ENABLED : boolean
+          {static} - timings : Map<String, Long>
+          {static} + logDebug()
+          {static} + logError()
+          {static} + logError()
+          {static} + logInfo()
+          {static} + logMapTileSearch()
+          {static} + logTimeStart()
+          {static} + logTimeStop()
+          {static} - isDebugEnabled()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.LogoutHelper {
+          {static} - TAG : String
+          {static} - clearImageCacheAsyncTask : ClearImageCacheAsyncTask
+          {static} + signOut()
+          {static} - logoutByProvider()
+          {static} - logoutFacebook()
+          {static} - logoutFirebase()
+          {static} - logoutGoogle()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.LogoutHelper.ClearImageCacheAsyncTask {
+          - context : Context
+          + ClearImageCacheAsyncTask()
+          # doInBackground()
+          # onPostExecute()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.NewsUtils {
+          {static} + vibrantLightColorList : ColorDrawable[]
+          {static} + DateFormat()
+          {static} + DateToTimeFormat()
+          {static} + getCountry()
+          {static} + getRandomDrawbleColor()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.PreferencesUtil {
+          {static} - PREF_PARAM_IS_POSTS_WAS_LOADED_AT_LEAST_ONCE : String
+          {static} - PREF_PARAM_IS_PROFILE_CREATED : String
+          {static} - SHARED_PREFERENCES_NAME : String
+          {static} - TAG : String
+          {static} + clearPreferences()
+          {static} + isPostWasLoadedAtLeastOnce()
+          {static} + isProfileCreated()
+          {static} + setPostWasLoadedAtLeastOnce()
+          {static} + setProfileCreated()
+          {static} - getSharedPreferences()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.Utils {
+          {static} + getDisplayHeight()
+          {static} + getDisplayWidth()
+          {static} - getSize()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.ValidationUtil {
+          {static} - IMAGE_TYPE : String[]
+          {static} + checkImageMinSize()
+          {static} + containsInvalidSymbol()
+          {static} + hasExtension()
+          {static} + isEmailValid()
+          {static} + isImage()
+          {static} + isMonthValid()
+          {static} + isNameValid()
+          {static} + isOnlyLatinLetters()
+          {static} + isPostTitleValid()
+          {static} + isYearValid()
+      }
+    }
+  }
+  
+
+  com.architectica.socialcomponents.utils.CustomAppGlideModule -up-|> com.bumptech.glide.module.AppGlideModule
+  com.architectica.socialcomponents.utils.LogoutHelper +-down- com.architectica.socialcomponents.utils.LogoutHelper.ClearImageCacheAsyncTask
+  com.architectica.socialcomponents.utils.LogoutHelper.ClearImageCacheAsyncTask -up-|> android.os.AsyncTask
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

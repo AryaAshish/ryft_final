@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        />
+
+    <item
+        android:id="@+id/menu_projects"
+        android:title="@string/menu_projects"
+        android:icon="@drawable/ic_event_note_black_24dp"
+        />
+
+    <item
+        android:id="@+id/menu_chats"
+        android:title="Chats"
+        android:icon="@drawable/ic_chat_black_24dp" />
+
+    <item
+        android:id="@+id/menu_google_news"
+        android:title="Google News"
+        android:icon="@drawable/ic_news"
+        />
+
+</menu>

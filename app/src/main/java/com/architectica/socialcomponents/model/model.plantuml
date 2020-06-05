@@ -1,0 +1,303 @@
+@startuml
+
+title __MODEL's Class Diagram__\n
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Article {
+          - author : String
+          - description : String
+          - publishedAt : String
+          - title : String
+          - url : String
+          - urlToImage : String
+          + getAuthor()
+          + getDescription()
+          + getPublishedAt()
+          + getSource()
+          + getTitle()
+          + getUrl()
+          + getUrlToImage()
+          + setAuthor()
+          + setDescription()
+          + setPublishedAt()
+          + setSource()
+          + setTitle()
+          + setUrl()
+          + setUrlToImage()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Comment {
+          - authorId : String
+          - createdDate : long
+          - id : String
+          - text : String
+          + Comment()
+          + Comment()
+          + getAuthorId()
+          + getCreatedDate()
+          + getId()
+          + getText()
+          + setAuthorId()
+          + setCreatedDate()
+          + setId()
+          + setText()
+          + toMap()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Follower {
+          - createdDate : long
+          - profileId : String
+          + Follower()
+          + Follower()
+          + getCreatedDate()
+          + getProfileId()
+          + setCreatedDate()
+          + setProfileId()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Following {
+          - createdDate : long
+          - profileId : String
+          + Following()
+          + Following()
+          + getCreatedDate()
+          + getProfileId()
+          + setCreatedDate()
+          + setProfileId()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.FollowingPost {
+          - postId : String
+          + FollowingPost()
+          + getPostId()
+          + setPostId()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      interface com.architectica.socialcomponents.model.LazyLoading {
+          {abstract} + getItemType()
+          {abstract} + setItemType()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Like {
+          - authorId : String
+          - createdDate : long
+          - id : String
+          + Like()
+          + Like()
+          + getCreatedDate()
+          + getId()
+          + setId()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Messages {
+          - from : String
+          - message : String
+          - type : String
+          + Messages()
+          + Messages()
+          + Messages()
+          + getFrom()
+          + getMessage()
+          + getType()
+          + setFrom()
+          + setMessage()
+          + setType()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.News {
+          - article : List<Article>
+          - status : String
+          - totalResult : int
+          + getArticle()
+          + getStatus()
+          + getTotalResult()
+          + setArticle()
+          + setStatus()
+          + setTotalResult()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Post {
+          - authorId : String
+          - commentsCount : long
+          - createdDate : long
+          - description : String
+          - hasComplain : boolean
+          - id : String
+          - imagePath : String
+          - imageTitle : String
+          - likesCount : long
+          - title : String
+          - watchersCount : long
+          + Post()
+          + Post()
+          + getAuthorId()
+          + getCommentsCount()
+          + getCreatedDate()
+          + getDescription()
+          + getId()
+          + getImageTitle()
+          + getItemType()
+          + getLikesCount()
+          + getTitle()
+          + getWatchersCount()
+          + isHasComplain()
+          + setAuthorId()
+          + setCommentsCount()
+          + setCreatedDate()
+          + setDescription()
+          + setHasComplain()
+          + setId()
+          + setImageTitle()
+          + setItemType()
+          + setLikesCount()
+          + setTitle()
+          + setWatchersCount()
+          + toMap()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.PostListResult {
+          ~ isMoreDataAvailable : boolean
+          ~ lastItemCreatedDate : long
+          ~ posts : List<Post>
+          + getLastItemCreatedDate()
+          + getPosts()
+          + isMoreDataAvailable()
+          + setLastItemCreatedDate()
+          + setMoreDataAvailable()
+          + setPosts()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Profile {
+          - email : String
+          - id : String
+          - likesCount : long
+          - phoneNumber : String
+          - photoUrl : String
+          - registrationToken : String
+          - skill : String
+          - status : String
+          - userbio : String
+          - username : String
+          - usertype : String
+          - useruri : String
+          + Profile()
+          + Profile()
+          + Profile()
+          + getEmail()
+          + getId()
+          + getItemType()
+          + getLikesCount()
+          + getPhoneNumber()
+          + getPhotoUrl()
+          + getRegistrationToken()
+          + getSkill()
+          + getStatus()
+          + getUserbio()
+          + getUsername()
+          + getUsertype()
+          + getUseruri()
+          + setEmail()
+          + setId()
+          + setItemType()
+          + setLikesCount()
+          + setPhoneNumber()
+          + setPhotoUrl()
+          + setRegistrationToken()
+          + setSkill()
+          + setStatus()
+          + setUserbio()
+          + setUsername()
+          + setUsertype()
+          + setUseruri()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Source {
+          - id : String
+          - name : String
+          + getId()
+          + getName()
+          + setId()
+          + setName()
+      }
+    }
+  }
+  
+
+  com.architectica.socialcomponents.model.Article o-- com.architectica.socialcomponents.model.Source : source
+  com.architectica.socialcomponents.model.Post .up.|> com.architectica.socialcomponents.model.LazyLoading
+  com.architectica.socialcomponents.model.Post .up.|> java.io.Serializable
+  com.architectica.socialcomponents.model.Post o-- com.architectica.socialcomponents.enums.ItemType : itemType
+  com.architectica.socialcomponents.model.Profile .up.|> com.architectica.socialcomponents.model.LazyLoading
+  com.architectica.socialcomponents.model.Profile .up.|> java.io.Serializable
+  com.architectica.socialcomponents.model.Profile o-- com.architectica.socialcomponents.enums.ItemType : itemType
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FFFFFF</color>
+    <color name="primary_dark">#EEEEEE</color>
+    <color name="primary_light">#D7CCC8</color>
+    <color name="dart_transparent">#81000000</color>
+
+    <color name="colorCardView">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="whiteTransparent">#DCFFFFFF</color>
+
+    <color name="AppTheme_lightest">#4159F5</color>
+    <color name="AppTheme_light">#352FC4</color>
+    <color name="AppTheme">#2C269f</color>
+    <color name="AppTheme_trans">#992C269F</color>
+
+
+    <color name="colorPrimary">#ea474a</color>
+    <color name="colorPrimaryDark">#cf2a2d</color>
+    <color name="colorAccent">#1e344b</color>
+
+    <color name="colorBackground">#f9f9fa</color>
+    <color name="colorTextSubtitle">#4e4e4e</color>
+    <color name="colorTextTitle">#262626</color>
+
+    <color name="color_search">#2196F3</color>
+
+    <color name="color_notifications">#9C27B0</color>
+
+    <color name="red">#ffcc0000</color>
+    <color name="green">#ff669900</color>
+
+    <color name="colorPrimaryTextContent">#DE000000</color>
+    <color name="colorSecondaryTextContent">#8A000000</color>
+
+    <color name="primary_dark_text">#28333D</color>
+    <color name="secondary_text">#434343</color>
+    <color name="secondary_light">#979797</color>
+
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="custom_divider_color">#F3F3F3</color>
+    <color name="highlight_text">#17a1d7</color>
+
+    <color name="send_button_color">@color/primary</color>
+
+    <color name="light_gray">#d8d6d5</color>
+    <color name="white">#ffffff</color>
+    <color name="posts_counter_bg">#df3e3e3e</color>
+
+    <color name="like_icon_activated">#FF5252</color>
+    <color name="icons_counter_color">#828181</color>
+    <color name="circle_image_shadow">#8b8b8b</color>
+
+    <color name="send_comment_button_activated">#0097d3</color>
+    <color name="send_comment_button_deactivated">#7fcbe9</color>
+
+    <color name="facebook_button_color">#3b5999</color>
+    <color name="facebook_button_color_pressed">#2f477a</color>
+    <color name="google_button_color">#d44837</color>
+    <color name="google_button_color_pressed">#FFA43528</color>
+    <color name="button_pressed_text_color">#bcbcbc</color>
+
+    <color name="follow_button_color">#4C41FF</color>
+    <color name="follow_button_pressed_color">#3930C7</color>
+    <color name="follow_button_light_color">@color/white</color>
+    <color name="follow_button_light_pressed_color">#f7f7f7</color>
+</resources>

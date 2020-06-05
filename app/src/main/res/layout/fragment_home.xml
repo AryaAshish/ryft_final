@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".main.main.MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/AppTheme"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large" />
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.architectica.socialcomponents.views.SwipeRefreshPreLollyPop
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null" />
+
+        </com.architectica.socialcomponents.views.SwipeRefreshPreLollyPop>
+
+        <TextView
+            android:id="@+id/newPostsCounterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/intrinsic_padding"
+            android:background="@drawable/posts_counter_bg"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addNewPostFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large_intrinsic_padding"
+        android:clickable="true"
+        android:backgroundTint="@color/AppTheme"
+        android:src="@drawable/ic_add_white_48dp"
+        android:layout_gravity="bottom|right" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

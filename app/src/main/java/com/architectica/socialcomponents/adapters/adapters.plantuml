@@ -1,0 +1,380 @@
+@startuml
+
+title __ADAPTERS's Class Diagram__\n
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      abstract class com.architectica.socialcomponents.adapters.BasePostsAdapter {
+          {static} + TAG : String
+          # postList : List<Post>
+          # selectedPostPosition : int
+          + BasePostsAdapter()
+          + getItemCount()
+          + getItemViewType()
+          + updateSelectedPost()
+          # cleanSelectedPostInformation()
+          # getItemByPosition()
+          - createOnPostChangeListener()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.ChatsListAdapter {
+          - context : Context
+          - profiles : List<Profile>
+          + ChatsListAdapter()
+          + getItemCount()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.ChatsListAdapter.ChatsListViewHolder {
+          + displayName : TextView
+          + ChatsListViewHolder()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.CommentsAdapter {
+          - list : List<Comment>
+          + getItemByPosition()
+          + getItemCount()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + setCallback()
+          + setList()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      interface com.architectica.socialcomponents.adapters.CommentsAdapter.Callback {
+          {abstract} + onAuthorClick()
+          {abstract} + onLongItemClick()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.FollowPostsAdapter {
+          {static} + TAG : String
+          - itemsList : List<FollowingPost>
+          - selectedPostPosition : int
+          + FollowPostsAdapter()
+          + getItemByPosition()
+          + getItemCount()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + setCallBack()
+          + setList()
+          + updateSelectedItem()
+          - createOnClickListener()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      interface com.architectica.socialcomponents.adapters.FollowPostsAdapter.CallBack {
+          {abstract} + onAuthorClick()
+          {abstract} + onItemClick()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.MessageAdapter {
+          {static} + MSG_TYPE_LEFT : int
+          {static} + MSG_TYPE_RIGHT : int
+          - activity : Activity
+          - mMessageList : List<Messages>
+          - mUserDatabase : DatabaseReference
+          + MessageAdapter()
+          + getItemCount()
+          + getItemViewType()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.MessageAdapter.MessageViewHolder {
+          + displayName : TextView
+          + messageImage : ImageView
+          + messageText : TextView
+          + MessageViewHolder()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.NewsAdapter {
+          - articles : List<Article>
+          - context : Context
+          + NewsAdapter()
+          + getItemCount()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.NewsAdapter.MyViewHolder {
+          ~ author : TextView
+          ~ desc : TextView
+          ~ imageView : ImageView
+          ~ progressBar : ProgressBar
+          ~ published_at : TextView
+          ~ source : TextView
+          ~ time : TextView
+          ~ title : TextView
+          + MyViewHolder()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.NotificationsAdapter {
+          {static} + TAG : String
+          - isLoading : boolean
+          - isMoreDataAvailable : boolean
+          - lastLoadedItemCreatedDate : long
+          - swipeContainer : SwipeRefreshLayout
+          + NotificationsAdapter()
+          + getItemId()
+          + loadAdminPostsFirstPage()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + removeSelectedPost()
+          + setCallback()
+          - addList()
+          - createOnClickListener()
+          - hideProgress()
+          - initRefreshLayout()
+          - loadAdminPostsNextPage()
+          - onRefreshAction()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      interface com.architectica.socialcomponents.adapters.NotificationsAdapter.Callback {
+          {abstract} + onAuthorClick()
+          {abstract} + onCanceled()
+          {abstract} + onItemClick()
+          {abstract} + onListLoadingFinished()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.PostsAdapter {
+          {static} + TAG : String
+          - isLoading : boolean
+          - isMoreDataAvailable : boolean
+          - lastLoadedItemCreatedDate : long
+          - swipeContainer : SwipeRefreshLayout
+          + PostsAdapter()
+          + getItemId()
+          + loadFirstPage()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + removeSelectedPost()
+          + setCallback()
+          - addList()
+          - createOnClickListener()
+          - hideProgress()
+          - initRefreshLayout()
+          - loadNext()
+          - onRefreshAction()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      interface com.architectica.socialcomponents.adapters.PostsAdapter.Callback {
+          {abstract} + onAuthorClick()
+          {abstract} + onCanceled()
+          {abstract} + onItemClick()
+          {abstract} + onListLoadingFinished()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.PostsByUserAdapter {
+          {static} + TAG : String
+          - userId : String
+          + PostsByUserAdapter()
+          + loadPosts()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + removeSelectedPost()
+          + setCallBack()
+          - createOnClickListener()
+          - setList()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      interface com.architectica.socialcomponents.adapters.PostsByUserAdapter.CallBack {
+          {abstract} + onItemClick()
+          {abstract} + onPostLoadingCanceled()
+          {abstract} + onPostsListChanged()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.SearchPostsAdapter {
+          {static} + TAG : String
+          + SearchPostsAdapter()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + removeSelectedPost()
+          + setCallBack()
+          + setList()
+          - createOnClickListener()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      interface com.architectica.socialcomponents.adapters.SearchPostsAdapter.CallBack {
+          {abstract} + enableClick()
+          {abstract} + onAuthorClick()
+          {abstract} + onItemClick()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.SearchUsersAdapter {
+          {static} + TAG : String
+          - activity : Activity
+          - itemsList : List<Profile>
+          + SearchUsersAdapter()
+          + getItemByPosition()
+          + getItemCount()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + setCallback()
+          + setList()
+          + updateItem()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.UsersAdapter {
+          {static} + TAG : String
+          - activity : Activity
+          - itemsList : List<String>
+          + UsersAdapter()
+          + getItemByPosition()
+          + getItemCount()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + setCallback()
+          + setList()
+          + updateItem()
+      }
+    }
+  }
+  
+
+  com.architectica.socialcomponents.adapters.BasePostsAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.BasePostsAdapter o-- com.architectica.socialcomponents.main.base.BaseActivity : activity
+  com.architectica.socialcomponents.adapters.ChatsListAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.ChatsListAdapter +-down- com.architectica.socialcomponents.adapters.ChatsListAdapter.ChatsListViewHolder
+  com.architectica.socialcomponents.adapters.ChatsListAdapter.ChatsListViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.ChatsListAdapter.ChatsListViewHolder o-- com.architectica.socialcomponents.views.CircularImageView : profileImage
+  com.architectica.socialcomponents.adapters.CommentsAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.CommentsAdapter o-- com.architectica.socialcomponents.adapters.CommentsAdapter.Callback : callback
+  com.architectica.socialcomponents.adapters.CommentsAdapter +-down- com.architectica.socialcomponents.adapters.CommentsAdapter.Callback
+  com.architectica.socialcomponents.adapters.FollowPostsAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.FollowPostsAdapter o-- com.architectica.socialcomponents.main.base.BaseActivity : activity
+  com.architectica.socialcomponents.adapters.FollowPostsAdapter o-- com.architectica.socialcomponents.adapters.FollowPostsAdapter.CallBack : callBack
+  com.architectica.socialcomponents.adapters.FollowPostsAdapter +-down- com.architectica.socialcomponents.adapters.FollowPostsAdapter.CallBack
+  com.architectica.socialcomponents.adapters.MessageAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.MessageAdapter +-down- com.architectica.socialcomponents.adapters.MessageAdapter.MessageViewHolder
+  com.architectica.socialcomponents.adapters.MessageAdapter.MessageViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.MessageAdapter.MessageViewHolder o-- com.architectica.socialcomponents.views.CircularImageView : profileImage
+  com.architectica.socialcomponents.adapters.NewsAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.NewsAdapter +-down- com.architectica.socialcomponents.adapters.NewsAdapter.MyViewHolder
+  com.architectica.socialcomponents.adapters.NewsAdapter.MyViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.NotificationsAdapter -up-|> com.architectica.socialcomponents.adapters.BasePostsAdapter
+  com.architectica.socialcomponents.adapters.NotificationsAdapter o-- com.architectica.socialcomponents.adapters.NotificationsAdapter.Callback : callback
+  com.architectica.socialcomponents.adapters.NotificationsAdapter o-- com.architectica.socialcomponents.main.main.MainActivity : mainActivity
+  com.architectica.socialcomponents.adapters.NotificationsAdapter +-down- com.architectica.socialcomponents.adapters.NotificationsAdapter.Callback
+  com.architectica.socialcomponents.adapters.PostsAdapter -up-|> com.architectica.socialcomponents.adapters.BasePostsAdapter
+  com.architectica.socialcomponents.adapters.PostsAdapter o-- com.architectica.socialcomponents.adapters.PostsAdapter.Callback : callback
+  com.architectica.socialcomponents.adapters.PostsAdapter o-- com.architectica.socialcomponents.main.main.MainActivity : mainActivity
+  com.architectica.socialcomponents.adapters.PostsAdapter +-down- com.architectica.socialcomponents.adapters.PostsAdapter.Callback
+  com.architectica.socialcomponents.adapters.PostsByUserAdapter -up-|> com.architectica.socialcomponents.adapters.BasePostsAdapter
+  com.architectica.socialcomponents.adapters.PostsByUserAdapter o-- com.architectica.socialcomponents.adapters.PostsByUserAdapter.CallBack : callBack
+  com.architectica.socialcomponents.adapters.PostsByUserAdapter +-down- com.architectica.socialcomponents.adapters.PostsByUserAdapter.CallBack
+  com.architectica.socialcomponents.adapters.SearchPostsAdapter -up-|> com.architectica.socialcomponents.adapters.BasePostsAdapter
+  com.architectica.socialcomponents.adapters.SearchPostsAdapter o-- com.architectica.socialcomponents.adapters.SearchPostsAdapter.CallBack : callBack
+  com.architectica.socialcomponents.adapters.SearchPostsAdapter +-down- com.architectica.socialcomponents.adapters.SearchPostsAdapter.CallBack
+  com.architectica.socialcomponents.adapters.SearchUsersAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.SearchUsersAdapter o-- com.architectica.socialcomponents.adapters.holders.UserViewHolder.Callback : callback
+  com.architectica.socialcomponents.adapters.UsersAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.UsersAdapter o-- com.architectica.socialcomponents.adapters.holders.UserViewHolder.Callback : callback
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

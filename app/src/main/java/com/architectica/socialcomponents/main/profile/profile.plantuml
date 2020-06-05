@@ -1,0 +1,140 @@
+@startuml
+
+title __PROFILE's Class Diagram__\n
+
+  namespace com.architectica.socialcomponents {
+    namespace main.profile {
+      class com.architectica.socialcomponents.main.profile.ProfileActivity {
+          {static} + CREATE_POST_FROM_PROFILE_REQUEST : int
+          {static} + USER_ID_EXTRA_KEY : String
+          {static} - TAG : String
+          - bioTextView : TextView
+          - currentUserId : String
+          - followersCounterTextView : TextView
+          - followingsCounterTextView : TextView
+          - imageView : ImageView
+          - likesCountersTextView : TextView
+          - mAuth : FirebaseAuth
+          - mGoogleApiClient : GoogleApiClient
+          - nameEditText : TextView
+          - postsCounterTextView : TextView
+          - postsProgressBar : ProgressBar
+          - progressBar : ProgressBar
+          - recyclerView : RecyclerView
+          - skillTextView : TextView
+          - statusTextView : TextView
+          - swipeContainer : SwipeRefreshLayout
+          - userID : String
+          + createPresenter()
+          + hideLoadingPostsProgress()
+          + onConnectionFailed()
+          + onCreateOptionsMenu()
+          + onOptionsItemSelected()
+          + onPostRemoved()
+          + onPostUpdated()
+          + onStart()
+          + onStop()
+          + onUnfollowButtonClicked()
+          + openCreatePostActivity()
+          + openPostDetailsActivity()
+          + setBio()
+          + setDefaultProfilePhoto()
+          + setFollowStateChangeResultOk()
+          + setProfileName()
+          + setProfilePhoto()
+          + setSkill()
+          + setStatus()
+          + showLikeCounter()
+          + showPostCounter()
+          + showUnfollowConfirmation()
+          + startEditProfileActivity()
+          + updateFollowButtonState()
+          + updateFollowersCount()
+          + updateFollowingsCount()
+          + updateLikesCounter()
+          + updatePostsCounter()
+          # onActivityResult()
+          # onCreate()
+          - initListeners()
+          - loadPostsList()
+          - onRefreshAction()
+          - scheduleStartPostponedTransition()
+          - startMainActivity()
+          - startUsersListActivity()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.profile {
+      class com.architectica.socialcomponents.main.profile.ProfilePresenter {
+          - activity : Activity
+          + buildCounterSpannable()
+          + checkFollowState()
+          + checkPostChanges()
+          + getFollowersCount()
+          + getFollowingsCount()
+          + loadProfile()
+          + onCreatePostClick()
+          + onEditProfileClick()
+          + onFollowButtonClick()
+          + onPostListChanged()
+          + unfollowUser()
+          ~ ProfilePresenter()
+          ~ onPostClick()
+          - followUser()
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.profile {
+      interface com.architectica.socialcomponents.main.profile.ProfileView {
+          {abstract} + hideLoadingPostsProgress()
+          {abstract} + onPostRemoved()
+          {abstract} + onPostUpdated()
+          {abstract} + openCreatePostActivity()
+          {abstract} + openPostDetailsActivity()
+          {abstract} + setBio()
+          {abstract} + setDefaultProfilePhoto()
+          {abstract} + setFollowStateChangeResultOk()
+          {abstract} + setProfileName()
+          {abstract} + setProfilePhoto()
+          {abstract} + setSkill()
+          {abstract} + setStatus()
+          {abstract} + showLikeCounter()
+          {abstract} + showPostCounter()
+          {abstract} + showUnfollowConfirmation()
+          {abstract} + startEditProfileActivity()
+          {abstract} + updateFollowButtonState()
+          {abstract} + updateFollowersCount()
+          {abstract} + updateFollowingsCount()
+          {abstract} + updateLikesCounter()
+          {abstract} + updatePostsCounter()
+      }
+    }
+  }
+  
+
+  com.architectica.socialcomponents.main.profile.ProfileActivity .up.|> com.architectica.socialcomponents.dialogs.UnfollowConfirmationDialog.Callback
+  com.architectica.socialcomponents.main.profile.ProfileActivity .up.|> com.architectica.socialcomponents.main.profile.ProfileView
+  com.architectica.socialcomponents.main.profile.ProfileActivity .up.|> com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener
+  com.architectica.socialcomponents.main.profile.ProfileActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.profile.ProfileActivity o-- com.architectica.socialcomponents.views.FollowButton : followButton
+  com.architectica.socialcomponents.main.profile.ProfileActivity o-- com.architectica.socialcomponents.adapters.PostsByUserAdapter : postsAdapter
+  com.architectica.socialcomponents.main.profile.ProfilePresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.profile.ProfilePresenter o-- com.architectica.socialcomponents.managers.FollowManager : followManager
+  com.architectica.socialcomponents.main.profile.ProfilePresenter o-- com.architectica.socialcomponents.model.Profile : profile
+  com.architectica.socialcomponents.main.profile.ProfilePresenter o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

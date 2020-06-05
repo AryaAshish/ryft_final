@@ -1,0 +1,1605 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace com.architectica.socialcomponents {
+    namespace AllUsersList {
+      class com.architectica.socialcomponents.AllUsersList.UsersActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    class com.architectica.socialcomponents.Application {
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    class com.architectica.socialcomponents.ApplicationHelper {
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    class com.architectica.socialcomponents.BuildConfig {
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    class com.architectica.socialcomponents.Constants {
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      abstract class com.architectica.socialcomponents.adapters.BasePostsAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.ChatsListAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.CommentsAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.FollowPostsAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.MessageAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.NewsAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.NotificationsAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.PostsAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.PostsByUserAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.SearchPostsAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.SearchUsersAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      class com.architectica.socialcomponents.adapters.UsersAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.CommentViewHolder {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.FollowPostViewHolder {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.LoadViewHolder {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.PostViewHolder {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace holders {
+        class com.architectica.socialcomponents.adapters.holders.UserViewHolder {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace viewPager {
+        abstract class com.architectica.socialcomponents.adapters.viewPager.SmartFragmentStatePagerAdapter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace adapters {
+      namespace viewPager {
+        class com.architectica.socialcomponents.adapters.viewPager.TabsPagerAdapter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace api {
+      class com.architectica.socialcomponents.api.ApiClient {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace api {
+      interface com.architectica.socialcomponents.api.ApiInterface {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace controllers {
+      class com.architectica.socialcomponents.controllers.LikeController {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace dialogs {
+      class com.architectica.socialcomponents.dialogs.EditCommentDialog {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace dialogs {
+      class com.architectica.socialcomponents.dialogs.UnfollowConfirmationDialog {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace enums {
+      enum FollowState {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace enums {
+      enum ItemType {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace enums {
+      enum PostStatus {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace enums {
+      enum ProfileStatus {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace enums {
+      enum UploadImagePrefix {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace listeners {
+      class com.architectica.socialcomponents.listeners.CustomTransitionListener {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.Chat {
+      class com.architectica.socialcomponents.main.Chat.ChatActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.Chat {
+      namespace List {
+        class com.architectica.socialcomponents.main.ChatsList.ChatsListActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.News {
+      class com.architectica.socialcomponents.main.News.GoogleNewsActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.base {
+      abstract class com.architectica.socialcomponents.main.base.BaseActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.base {
+      abstract class com.architectica.socialcomponents.main.base.BaseFragment {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.base {
+      interface com.architectica.socialcomponents.main.base.BaseFragmentView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.base {
+      class com.architectica.socialcomponents.main.base.BasePresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.base {
+      interface com.architectica.socialcomponents.main.base.BaseView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.editProfile {
+      class com.architectica.socialcomponents.main.editProfile.EditProfileActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.editProfile {
+      class com.architectica.socialcomponents.main.editProfile.EditProfilePresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.editProfile {
+      interface com.architectica.socialcomponents.main.editProfile.EditProfileView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.editProfile {
+      namespace createProfile {
+        class com.architectica.socialcomponents.main.editProfile.createProfile.CreateProfileActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.editProfile {
+      namespace createProfile {
+        class com.architectica.socialcomponents.main.editProfile.createProfile.CreateProfilePresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.editProfile {
+      namespace createProfile {
+        interface com.architectica.socialcomponents.main.editProfile.createProfile.CreateProfileView {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.followPosts {
+      interface com.architectica.socialcomponents.main.followPosts.FollowPostsView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.followPosts {
+      class com.architectica.socialcomponents.main.followPosts.FollowingPostsActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.followPosts {
+      class com.architectica.socialcomponents.main.followPosts.FollowingPostsPresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.imageDetail {
+      class com.architectica.socialcomponents.main.imageDetail.ImageDetailActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.imageDetail {
+      class com.architectica.socialcomponents.main.imageDetail.ImageDetailPresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.imageDetail {
+      interface com.architectica.socialcomponents.main.imageDetail.ImageDetailView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.interactors {
+      class com.architectica.socialcomponents.main.interactors.CommentInteractor {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.interactors {
+      class com.architectica.socialcomponents.main.interactors.FollowInteractor {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.interactors {
+      class com.architectica.socialcomponents.main.interactors.PostInteractor {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.interactors {
+      class com.architectica.socialcomponents.main.interactors.ProfileInteractor {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.login {
+      class com.architectica.socialcomponents.main.login.LoginActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.login {
+      class com.architectica.socialcomponents.main.login.LoginPresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.login {
+      interface com.architectica.socialcomponents.main.login.LoginView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      namespace Home {
+        class com.architectica.socialcomponents.main.main.Home.HomeFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      namespace Home {
+        class com.architectica.socialcomponents.main.main.Home.HomePresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      namespace Home {
+        interface com.architectica.socialcomponents.main.main.Home.HomeView {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      class com.architectica.socialcomponents.main.main.MainActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      class com.architectica.socialcomponents.main.main.MainPresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      interface com.architectica.socialcomponents.main.main.MainView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      namespace Notifications {
+        class com.architectica.socialcomponents.main.main.Notifications.NotificationsFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      namespace Notifications {
+        class com.architectica.socialcomponents.main.main.Notifications.NotificationsPresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      namespace Notifications {
+        interface com.architectica.socialcomponents.main.main.Notifications.NotificationsView {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      namespace Profile {
+        class com.architectica.socialcomponents.main.main.Profile.ProfileFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      namespace Profile {
+        class com.architectica.socialcomponents.main.main.Profile.ProfilePresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.main {
+      namespace Profile {
+        interface com.architectica.socialcomponents.main.main.Profile.ProfileView {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.pickImageBase {
+      abstract class com.architectica.socialcomponents.main.pickImageBase.PickImageActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.pickImageBase {
+      class com.architectica.socialcomponents.main.pickImageBase.PickImagePresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.pickImageBase {
+      interface com.architectica.socialcomponents.main.pickImageBase.PickImageView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      abstract class com.architectica.socialcomponents.main.post.BaseCreatePostActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      abstract class com.architectica.socialcomponents.main.post.BaseCreatePostPresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      interface com.architectica.socialcomponents.main.post.BaseCreatePostView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace createPost {
+        class com.architectica.socialcomponents.main.post.createPost.CreatePostActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace createPost {
+        class com.architectica.socialcomponents.main.post.createPost.CreatePostPresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace createPost {
+        interface com.architectica.socialcomponents.main.post.createPost.CreatePostView {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace editPost {
+        class com.architectica.socialcomponents.main.post.editPost.EditPostActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace editPost {
+        class com.architectica.socialcomponents.main.post.editPost.EditPostPresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace editPost {
+        interface com.architectica.socialcomponents.main.post.editPost.EditPostView {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace etails {
+        class com.architectica.socialcomponents.main.postDetails.PostDetailsActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace etails {
+        class com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.post {
+      namespace etails {
+        interface com.architectica.socialcomponents.main.postDetails.PostDetailsView {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.profile {
+      class com.architectica.socialcomponents.main.profile.ProfileActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.profile {
+      class com.architectica.socialcomponents.main.profile.ProfilePresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.profile {
+      interface com.architectica.socialcomponents.main.profile.ProfileView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      class com.architectica.socialcomponents.main.search.SearchActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      class com.architectica.socialcomponents.main.search.SearchPresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      interface com.architectica.socialcomponents.main.search.SearchView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      interface com.architectica.socialcomponents.main.search.Searchable {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      namespace posts {
+        class com.architectica.socialcomponents.main.search.posts.SearchPostsFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      namespace posts {
+        class com.architectica.socialcomponents.main.search.posts.SearchPostsPresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      namespace posts {
+        interface com.architectica.socialcomponents.main.search.posts.SearchPostsView {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      namespace users {
+        class com.architectica.socialcomponents.main.search.users.SearchUsersBySkillsFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      namespace users {
+        class com.architectica.socialcomponents.main.search.users.SearchUsersFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      namespace users {
+        class com.architectica.socialcomponents.main.search.users.SearchUsersPresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.search {
+      namespace users {
+        interface com.architectica.socialcomponents.main.search.users.SearchUsersView {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.usersList {
+      class com.architectica.socialcomponents.main.usersList.UsersListActivity {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.usersList {
+      class com.architectica.socialcomponents.main.usersList.UsersListPresenter {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.usersList {
+      interface com.architectica.socialcomponents.main.usersList.UsersListType {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace main.usersList {
+      interface com.architectica.socialcomponents.main.usersList.UsersListView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.CommentManager {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.DatabaseHelper {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.FirebaseListenersManager {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.FollowManager {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.PostManager {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      class com.architectica.socialcomponents.managers.ProfileManager {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnCountChangedListener {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnDataChangedListener {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnObjectChangedListener {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        abstract class com.architectica.socialcomponents.managers.listeners.OnObjectChangedListenerSimple {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnObjectExistListener {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnPostChangedListener {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnPostCreatedListener {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnPostListChangedListener {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnProfileCreatedListener {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnRequestComplete {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace managers {
+      namespace listeners {
+        interface com.architectica.socialcomponents.managers.listeners.OnTaskCompleteListener {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Article {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Comment {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Follower {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Following {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.FollowingPost {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      interface com.architectica.socialcomponents.model.LazyLoading {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Like {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Messages {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.News {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Post {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.PostListResult {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Profile {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace model {
+      class com.architectica.socialcomponents.model.Source {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace services {
+      class com.architectica.socialcomponents.services.MyFirebaseInstanceIDService {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace services {
+      class com.architectica.socialcomponents.services.MyFirebaseMessagingService {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.AnimationUtils {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.CustomAppGlideModule {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.FormatterUtil {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.GlideApp {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.GlideOptions {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.GlideRequest {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.GlideRequests {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.GoogleApiHelper {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.ImageUtil {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.ImagesDir {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.LogUtil {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.LogoutHelper {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.NewsUtils {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.PreferencesUtil {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.Utils {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace utils {
+      class com.architectica.socialcomponents.utils.ValidationUtil {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.CircularImageView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.ExpandableTextView {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.FollowButton {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.SwipeRefreshPreLollyPop {
+      }
+    }
+  }
+  
+
+  namespace com.architectica.socialcomponents {
+    namespace views {
+      class com.architectica.socialcomponents.views.TouchImageView {
+      }
+    }
+  }
+  
+
+  namespace com.bumptech.glide {
+    class com.bumptech.glide.GeneratedAppGlideModuleImpl {
+    }
+  }
+  
+
+  namespace com.bumptech.glide {
+    class com.bumptech.glide.GeneratedRequestManagerFactory {
+    }
+  }
+  
+
+  com.architectica.socialcomponents.AllUsersList.UsersActivity -up-|> android.support.v7.app.AppCompatActivity
+  com.architectica.socialcomponents.AllUsersList.UsersActivity o-- com.architectica.socialcomponents.adapters.ChatsListAdapter : adapter
+  com.architectica.socialcomponents.Application -up-|> android.app.Application
+  com.architectica.socialcomponents.adapters.BasePostsAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.BasePostsAdapter o-- com.architectica.socialcomponents.main.base.BaseActivity : activity
+  com.architectica.socialcomponents.adapters.ChatsListAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.CommentsAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.CommentsAdapter o-- com.architectica.socialcomponents.adapters.CommentsAdapter.Callback : callback
+  com.architectica.socialcomponents.adapters.FollowPostsAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.FollowPostsAdapter o-- com.architectica.socialcomponents.main.base.BaseActivity : activity
+  com.architectica.socialcomponents.adapters.FollowPostsAdapter o-- com.architectica.socialcomponents.adapters.FollowPostsAdapter.CallBack : callBack
+  com.architectica.socialcomponents.adapters.MessageAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.NewsAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.NotificationsAdapter -up-|> com.architectica.socialcomponents.adapters.BasePostsAdapter
+  com.architectica.socialcomponents.adapters.NotificationsAdapter o-- com.architectica.socialcomponents.adapters.NotificationsAdapter.Callback : callback
+  com.architectica.socialcomponents.adapters.NotificationsAdapter o-- com.architectica.socialcomponents.main.main.MainActivity : mainActivity
+  com.architectica.socialcomponents.adapters.PostsAdapter -up-|> com.architectica.socialcomponents.adapters.BasePostsAdapter
+  com.architectica.socialcomponents.adapters.PostsAdapter o-- com.architectica.socialcomponents.adapters.PostsAdapter.Callback : callback
+  com.architectica.socialcomponents.adapters.PostsAdapter o-- com.architectica.socialcomponents.main.main.MainActivity : mainActivity
+  com.architectica.socialcomponents.adapters.PostsByUserAdapter -up-|> com.architectica.socialcomponents.adapters.BasePostsAdapter
+  com.architectica.socialcomponents.adapters.PostsByUserAdapter o-- com.architectica.socialcomponents.adapters.PostsByUserAdapter.CallBack : callBack
+  com.architectica.socialcomponents.adapters.SearchPostsAdapter -up-|> com.architectica.socialcomponents.adapters.BasePostsAdapter
+  com.architectica.socialcomponents.adapters.SearchPostsAdapter o-- com.architectica.socialcomponents.adapters.SearchPostsAdapter.CallBack : callBack
+  com.architectica.socialcomponents.adapters.SearchUsersAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.SearchUsersAdapter o-- com.architectica.socialcomponents.adapters.holders.UserViewHolder.Callback : callback
+  com.architectica.socialcomponents.adapters.UsersAdapter -up-|> android.support.v7.widget.RecyclerView.Adapter
+  com.architectica.socialcomponents.adapters.UsersAdapter o-- com.architectica.socialcomponents.adapters.holders.UserViewHolder.Callback : callback
+  com.architectica.socialcomponents.adapters.holders.CommentViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.holders.CommentViewHolder o-- com.architectica.socialcomponents.adapters.CommentsAdapter.Callback : callback
+  com.architectica.socialcomponents.adapters.holders.CommentViewHolder o-- com.architectica.socialcomponents.views.ExpandableTextView : commentTextView
+  com.architectica.socialcomponents.adapters.holders.CommentViewHolder o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.adapters.holders.FollowPostViewHolder -up-|> com.architectica.socialcomponents.adapters.holders.PostViewHolder
+  com.architectica.socialcomponents.adapters.holders.LoadViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder o-- com.architectica.socialcomponents.main.base.BaseActivity : baseActivity
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder o-- com.architectica.socialcomponents.controllers.LikeController : likeController
+  com.architectica.socialcomponents.adapters.holders.PostViewHolder o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.adapters.holders.UserViewHolder -up-|> android.support.v7.widget.RecyclerView.ViewHolder
+  com.architectica.socialcomponents.adapters.holders.UserViewHolder o-- com.architectica.socialcomponents.views.FollowButton : followButton
+  com.architectica.socialcomponents.adapters.holders.UserViewHolder o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.adapters.viewPager.SmartFragmentStatePagerAdapter -up-|> android.support.v4.app.FragmentStatePagerAdapter
+  com.architectica.socialcomponents.adapters.viewPager.TabsPagerAdapter -up-|> com.architectica.socialcomponents.adapters.viewPager.SmartFragmentStatePagerAdapter
+  com.architectica.socialcomponents.controllers.LikeController o-- com.architectica.socialcomponents.controllers.LikeController.AnimationType : likeAnimationType
+  com.architectica.socialcomponents.dialogs.EditCommentDialog -up-|> android.app.DialogFragment
+  com.architectica.socialcomponents.dialogs.EditCommentDialog o-- com.architectica.socialcomponents.dialogs.EditCommentDialog.CommentDialogCallback : callback
+  com.architectica.socialcomponents.dialogs.UnfollowConfirmationDialog -up-|> android.app.DialogFragment
+  com.architectica.socialcomponents.dialogs.UnfollowConfirmationDialog o-- com.architectica.socialcomponents.dialogs.UnfollowConfirmationDialog.Callback : callback
+  com.architectica.socialcomponents.dialogs.UnfollowConfirmationDialog o-- com.architectica.socialcomponents.model.Profile : profile
+  com.architectica.socialcomponents.listeners.CustomTransitionListener .up.|> android.transition.Transition.TransitionListener
+  com.architectica.socialcomponents.main.Chat.ChatActivity -up-|> android.support.v7.app.AppCompatActivity
+  com.architectica.socialcomponents.main.Chat.ChatActivity o-- com.architectica.socialcomponents.adapters.MessageAdapter : mAdapter
+  com.architectica.socialcomponents.main.Chat.ChatActivity o-- com.architectica.socialcomponents.views.CircularImageView : mProfileImage
+  com.architectica.socialcomponents.main.ChatsList.ChatsListActivity -up-|> android.support.v7.app.AppCompatActivity
+  com.architectica.socialcomponents.main.ChatsList.ChatsListActivity o-- com.architectica.socialcomponents.adapters.ChatsListAdapter : adapter
+  com.architectica.socialcomponents.main.News.GoogleNewsActivity -up-|> android.support.v7.app.AppCompatActivity
+  com.architectica.socialcomponents.main.News.GoogleNewsActivity o-- com.architectica.socialcomponents.adapters.NewsAdapter : newsAdapter
+  com.architectica.socialcomponents.main.base.BaseActivity .up.|> com.architectica.socialcomponents.main.base.BaseView
+  com.architectica.socialcomponents.main.base.BaseActivity -up-|> com.hannesdorfmann.mosby3.mvp.MvpActivity
+  com.architectica.socialcomponents.main.base.BaseFragment .up.|> com.architectica.socialcomponents.main.base.BaseFragmentView
+  com.architectica.socialcomponents.main.base.BaseFragment -up-|> com.hannesdorfmann.mosby3.mvp.MvpFragment
+  com.architectica.socialcomponents.main.base.BasePresenter -up-|> com.hannesdorfmann.mosby3.mvp.MvpBasePresenter
+  com.architectica.socialcomponents.main.base.BasePresenter o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.main.editProfile.EditProfileActivity .up.|> com.architectica.socialcomponents.main.editProfile.EditProfileView
+  com.architectica.socialcomponents.main.editProfile.EditProfileActivity -up-|> com.architectica.socialcomponents.main.pickImageBase.PickImageActivity
+  com.architectica.socialcomponents.main.editProfile.EditProfileActivity o-- com.architectica.socialcomponents.views.CircularImageView : imageView
+  com.architectica.socialcomponents.main.editProfile.EditProfilePresenter -up-|> com.architectica.socialcomponents.main.pickImageBase.PickImagePresenter
+  com.architectica.socialcomponents.main.editProfile.EditProfilePresenter o-- com.architectica.socialcomponents.model.Profile : profile
+  com.architectica.socialcomponents.main.editProfile.EditProfilePresenter o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.main.editProfile.createProfile.CreateProfileActivity .up.|> com.architectica.socialcomponents.main.editProfile.createProfile.CreateProfileView
+  com.architectica.socialcomponents.main.editProfile.createProfile.CreateProfileActivity -up-|> com.architectica.socialcomponents.main.editProfile.EditProfileActivity
+  com.architectica.socialcomponents.main.editProfile.createProfile.CreateProfilePresenter -up-|> com.architectica.socialcomponents.main.editProfile.EditProfilePresenter
+  com.architectica.socialcomponents.main.followPosts.FollowingPostsActivity .up.|> com.architectica.socialcomponents.main.followPosts.FollowPostsView
+  com.architectica.socialcomponents.main.followPosts.FollowingPostsActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.followPosts.FollowingPostsActivity o-- com.architectica.socialcomponents.adapters.FollowPostsAdapter : postsAdapter
+  com.architectica.socialcomponents.main.followPosts.FollowingPostsPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.followPosts.FollowingPostsPresenter o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.main.imageDetail.ImageDetailActivity .up.|> com.architectica.socialcomponents.main.imageDetail.ImageDetailView
+  com.architectica.socialcomponents.main.imageDetail.ImageDetailActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.imageDetail.ImageDetailActivity o-- com.architectica.socialcomponents.views.TouchImageView : touchImageView
+  com.architectica.socialcomponents.main.imageDetail.ImageDetailPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.interactors.CommentInteractor o-- com.architectica.socialcomponents.managers.DatabaseHelper : databaseHelper
+  com.architectica.socialcomponents.main.interactors.FollowInteractor o-- com.architectica.socialcomponents.managers.DatabaseHelper : databaseHelper
+  com.architectica.socialcomponents.main.interactors.PostInteractor o-- com.architectica.socialcomponents.managers.DatabaseHelper : databaseHelper
+  com.architectica.socialcomponents.main.interactors.ProfileInteractor o-- com.architectica.socialcomponents.managers.DatabaseHelper : databaseHelper
+  com.architectica.socialcomponents.main.login.LoginActivity .up.|> com.architectica.socialcomponents.main.login.LoginView
+  com.architectica.socialcomponents.main.login.LoginActivity .up.|> com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener
+  com.architectica.socialcomponents.main.login.LoginActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.login.LoginPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.main.Home.HomeFragment .up.|> com.architectica.socialcomponents.main.main.Home.HomeView
+  com.architectica.socialcomponents.main.main.Home.HomeFragment -up-|> com.architectica.socialcomponents.main.base.BaseFragment
+  com.architectica.socialcomponents.main.main.Home.HomeFragment o-- com.architectica.socialcomponents.adapters.PostsAdapter : postsAdapter
+  com.architectica.socialcomponents.main.main.Home.HomePresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.main.Home.HomePresenter o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.main.main.MainActivity .up.|> com.architectica.socialcomponents.main.main.MainView
+  com.architectica.socialcomponents.main.main.MainActivity .up.|> com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener
+  com.architectica.socialcomponents.main.main.MainActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.main.MainPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.main.Notifications.NotificationsFragment .up.|> com.architectica.socialcomponents.main.main.Notifications.NotificationsView
+  com.architectica.socialcomponents.main.main.Notifications.NotificationsFragment -up-|> com.architectica.socialcomponents.main.base.BaseFragment
+  com.architectica.socialcomponents.main.main.Notifications.NotificationsFragment o-- com.architectica.socialcomponents.adapters.NotificationsAdapter : postsAdapter
+  com.architectica.socialcomponents.main.main.Notifications.NotificationsPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.main.Notifications.NotificationsPresenter o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.main.main.Profile.ProfileFragment .up.|> com.architectica.socialcomponents.dialogs.UnfollowConfirmationDialog.Callback
+  com.architectica.socialcomponents.main.main.Profile.ProfileFragment .up.|> com.architectica.socialcomponents.main.main.Profile.ProfileView
+  com.architectica.socialcomponents.main.main.Profile.ProfileFragment -up-|> com.architectica.socialcomponents.main.base.BaseFragment
+  com.architectica.socialcomponents.main.main.Profile.ProfileFragment o-- com.architectica.socialcomponents.views.FollowButton : followButton
+  com.architectica.socialcomponents.main.main.Profile.ProfileFragment o-- com.architectica.socialcomponents.adapters.PostsByUserAdapter : postsAdapter
+  com.architectica.socialcomponents.main.main.Profile.ProfilePresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.main.Profile.ProfilePresenter o-- com.architectica.socialcomponents.managers.FollowManager : followManager
+  com.architectica.socialcomponents.main.main.Profile.ProfilePresenter o-- com.architectica.socialcomponents.model.Profile : profile
+  com.architectica.socialcomponents.main.main.Profile.ProfilePresenter o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.main.pickImageBase.PickImageActivity .up.|> com.architectica.socialcomponents.main.pickImageBase.PickImageView
+  com.architectica.socialcomponents.main.pickImageBase.PickImageActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.pickImageBase.PickImagePresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.post.BaseCreatePostActivity .up.|> com.architectica.socialcomponents.main.post.BaseCreatePostView
+  com.architectica.socialcomponents.main.post.BaseCreatePostActivity -up-|> com.architectica.socialcomponents.main.pickImageBase.PickImageActivity
+  com.architectica.socialcomponents.main.post.BaseCreatePostPresenter .up.|> com.architectica.socialcomponents.managers.listeners.OnPostCreatedListener
+  com.architectica.socialcomponents.main.post.BaseCreatePostPresenter -up-|> com.architectica.socialcomponents.main.pickImageBase.PickImagePresenter
+  com.architectica.socialcomponents.main.post.BaseCreatePostPresenter o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.main.post.createPost.CreatePostActivity .up.|> com.architectica.socialcomponents.main.post.createPost.CreatePostView
+  com.architectica.socialcomponents.main.post.createPost.CreatePostActivity -up-|> com.architectica.socialcomponents.main.post.BaseCreatePostActivity
+  com.architectica.socialcomponents.main.post.createPost.CreatePostPresenter -up-|> com.architectica.socialcomponents.main.post.BaseCreatePostPresenter
+  com.architectica.socialcomponents.main.post.editPost.EditPostActivity .up.|> com.architectica.socialcomponents.main.post.editPost.EditPostView
+  com.architectica.socialcomponents.main.post.editPost.EditPostActivity -up-|> com.architectica.socialcomponents.main.post.BaseCreatePostActivity
+  com.architectica.socialcomponents.main.post.editPost.EditPostPresenter -up-|> com.architectica.socialcomponents.main.post.BaseCreatePostPresenter
+  com.architectica.socialcomponents.main.post.editPost.EditPostPresenter o-- com.architectica.socialcomponents.model.Post : post
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity .up.|> com.architectica.socialcomponents.dialogs.EditCommentDialog.CommentDialogCallback
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity .up.|> com.architectica.socialcomponents.main.postDetails.PostDetailsView
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity o-- com.architectica.socialcomponents.adapters.CommentsAdapter : commentsAdapter
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity o-- com.architectica.socialcomponents.controllers.LikeController : likeController
+  com.architectica.socialcomponents.main.postDetails.PostDetailsActivity o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter o-- com.architectica.socialcomponents.managers.CommentManager : commentManager
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter o-- com.architectica.socialcomponents.model.Post : post
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.main.postDetails.PostDetailsPresenter o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.main.profile.ProfileActivity .up.|> com.architectica.socialcomponents.dialogs.UnfollowConfirmationDialog.Callback
+  com.architectica.socialcomponents.main.profile.ProfileActivity .up.|> com.architectica.socialcomponents.main.profile.ProfileView
+  com.architectica.socialcomponents.main.profile.ProfileActivity .up.|> com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener
+  com.architectica.socialcomponents.main.profile.ProfileActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.profile.ProfileActivity o-- com.architectica.socialcomponents.views.FollowButton : followButton
+  com.architectica.socialcomponents.main.profile.ProfileActivity o-- com.architectica.socialcomponents.adapters.PostsByUserAdapter : postsAdapter
+  com.architectica.socialcomponents.main.profile.ProfilePresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.profile.ProfilePresenter o-- com.architectica.socialcomponents.managers.FollowManager : followManager
+  com.architectica.socialcomponents.main.profile.ProfilePresenter o-- com.architectica.socialcomponents.model.Profile : profile
+  com.architectica.socialcomponents.main.profile.ProfilePresenter o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.main.search.SearchActivity .up.|> com.architectica.socialcomponents.main.search.SearchView
+  com.architectica.socialcomponents.main.search.SearchActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.search.SearchActivity o-- com.architectica.socialcomponents.adapters.viewPager.TabsPagerAdapter : tabsAdapter
+  com.architectica.socialcomponents.main.search.SearchPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.search.posts.SearchPostsFragment .up.|> com.architectica.socialcomponents.main.search.Searchable
+  com.architectica.socialcomponents.main.search.posts.SearchPostsFragment .up.|> com.architectica.socialcomponents.main.search.posts.SearchPostsView
+  com.architectica.socialcomponents.main.search.posts.SearchPostsFragment -up-|> com.architectica.socialcomponents.main.base.BaseFragment
+  com.architectica.socialcomponents.main.search.posts.SearchPostsFragment o-- com.architectica.socialcomponents.adapters.SearchPostsAdapter : postsAdapter
+  com.architectica.socialcomponents.main.search.posts.SearchPostsPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.search.posts.SearchPostsPresenter o-- com.architectica.socialcomponents.managers.PostManager : postManager
+  com.architectica.socialcomponents.main.search.users.SearchUsersBySkillsFragment .up.|> com.architectica.socialcomponents.main.search.Searchable
+  com.architectica.socialcomponents.main.search.users.SearchUsersBySkillsFragment .up.|> com.architectica.socialcomponents.main.search.users.SearchUsersView
+  com.architectica.socialcomponents.main.search.users.SearchUsersBySkillsFragment -up-|> com.architectica.socialcomponents.main.base.BaseFragment
+  com.architectica.socialcomponents.main.search.users.SearchUsersBySkillsFragment o-- com.architectica.socialcomponents.adapters.SearchUsersAdapter : usersAdapter
+  com.architectica.socialcomponents.main.search.users.SearchUsersFragment .up.|> com.architectica.socialcomponents.main.search.Searchable
+  com.architectica.socialcomponents.main.search.users.SearchUsersFragment .up.|> com.architectica.socialcomponents.main.search.users.SearchUsersView
+  com.architectica.socialcomponents.main.search.users.SearchUsersFragment -up-|> com.architectica.socialcomponents.main.base.BaseFragment
+  com.architectica.socialcomponents.main.search.users.SearchUsersFragment o-- com.architectica.socialcomponents.adapters.SearchUsersAdapter : usersAdapter
+  com.architectica.socialcomponents.main.search.users.SearchUsersPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.search.users.SearchUsersPresenter o-- com.architectica.socialcomponents.managers.FollowManager : followManager
+  com.architectica.socialcomponents.main.search.users.SearchUsersPresenter o-- com.architectica.socialcomponents.managers.ProfileManager : profileManager
+  com.architectica.socialcomponents.main.usersList.UsersListActivity .up.|> com.architectica.socialcomponents.main.usersList.UsersListView
+  com.architectica.socialcomponents.main.usersList.UsersListActivity -up-|> com.architectica.socialcomponents.main.base.BaseActivity
+  com.architectica.socialcomponents.main.usersList.UsersListActivity o-- com.architectica.socialcomponents.adapters.UsersAdapter : usersAdapter
+  com.architectica.socialcomponents.main.usersList.UsersListPresenter -up-|> com.architectica.socialcomponents.main.base.BasePresenter
+  com.architectica.socialcomponents.main.usersList.UsersListPresenter o-- com.architectica.socialcomponents.managers.FollowManager : followManager
+  com.architectica.socialcomponents.managers.CommentManager -up-|> com.architectica.socialcomponents.managers.FirebaseListenersManager
+  com.architectica.socialcomponents.managers.CommentManager o-- com.architectica.socialcomponents.main.interactors.CommentInteractor : commentInteractor
+  com.architectica.socialcomponents.managers.FollowManager -up-|> com.architectica.socialcomponents.managers.FirebaseListenersManager
+  com.architectica.socialcomponents.managers.FollowManager o-- com.architectica.socialcomponents.main.interactors.FollowInteractor : followInteractor
+  com.architectica.socialcomponents.managers.PostManager -up-|> com.architectica.socialcomponents.managers.FirebaseListenersManager
+  com.architectica.socialcomponents.managers.PostManager o-- com.architectica.socialcomponents.managers.PostManager.PostCounterWatcher : postCounterWatcher
+  com.architectica.socialcomponents.managers.PostManager o-- com.architectica.socialcomponents.main.interactors.PostInteractor : postInteractor
+  com.architectica.socialcomponents.managers.ProfileManager -up-|> com.architectica.socialcomponents.managers.FirebaseListenersManager
+  com.architectica.socialcomponents.managers.ProfileManager o-- com.architectica.socialcomponents.main.interactors.ProfileInteractor : profileInteractor
+  com.architectica.socialcomponents.managers.listeners.OnObjectChangedListenerSimple .up.|> com.architectica.socialcomponents.managers.listeners.OnObjectChangedListener
+  com.architectica.socialcomponents.model.Article o-- com.architectica.socialcomponents.model.Source : source
+  com.architectica.socialcomponents.model.Post .up.|> com.architectica.socialcomponents.model.LazyLoading
+  com.architectica.socialcomponents.model.Post .up.|> java.io.Serializable
+  com.architectica.socialcomponents.model.Post o-- com.architectica.socialcomponents.enums.ItemType : itemType
+  com.architectica.socialcomponents.model.Profile .up.|> com.architectica.socialcomponents.model.LazyLoading
+  com.architectica.socialcomponents.model.Profile .up.|> java.io.Serializable
+  com.architectica.socialcomponents.model.Profile o-- com.architectica.socialcomponents.enums.ItemType : itemType
+  com.architectica.socialcomponents.services.MyFirebaseInstanceIDService -up-|> com.google.firebase.iid.FirebaseInstanceIdService
+  com.architectica.socialcomponents.services.MyFirebaseMessagingService -up-|> com.google.firebase.messaging.FirebaseMessagingService
+  com.architectica.socialcomponents.utils.CustomAppGlideModule -up-|> com.bumptech.glide.module.AppGlideModule
+  com.architectica.socialcomponents.utils.GlideOptions .up.|> java.lang.Cloneable
+  com.architectica.socialcomponents.utils.GlideOptions -up-|> com.bumptech.glide.request.RequestOptions
+  com.architectica.socialcomponents.utils.GlideRequest .up.|> java.lang.Cloneable
+  com.architectica.socialcomponents.utils.GlideRequest -up-|> com.bumptech.glide.RequestBuilder
+  com.architectica.socialcomponents.utils.GlideRequests -up-|> com.bumptech.glide.RequestManager
+  com.architectica.socialcomponents.views.CircularImageView -up-|> android.widget.ImageView
+  com.architectica.socialcomponents.views.ExpandableTextView .up.|> android.view.View.OnClickListener
+  com.architectica.socialcomponents.views.ExpandableTextView -up-|> android.widget.LinearLayout
+  com.architectica.socialcomponents.views.ExpandableTextView o-- com.architectica.socialcomponents.views.ExpandableTextView.OnExpandStateChangeListener : mListener
+  com.architectica.socialcomponents.views.FollowButton -up-|> android.support.v7.widget.AppCompatButton
+  com.architectica.socialcomponents.views.SwipeRefreshPreLollyPop -up-|> android.support.v4.widget.SwipeRefreshLayout
+  com.architectica.socialcomponents.views.TouchImageView -up-|> android.widget.ImageView
+  com.architectica.socialcomponents.views.TouchImageView o-- com.architectica.socialcomponents.views.TouchImageView.ZoomVariables : delayedZoomVariables
+  com.architectica.socialcomponents.views.TouchImageView o-- com.architectica.socialcomponents.views.TouchImageView.Fling : fling
+  com.architectica.socialcomponents.views.TouchImageView o-- com.architectica.socialcomponents.views.TouchImageView.State : state
+  com.architectica.socialcomponents.views.TouchImageView o-- com.architectica.socialcomponents.views.TouchImageView.OnTouchImageViewListener : touchImageViewListener
+  com.bumptech.glide.GeneratedAppGlideModuleImpl -up-|> com.bumptech.glide.GeneratedAppGlideModule
+  com.bumptech.glide.GeneratedAppGlideModuleImpl o-- com.architectica.socialcomponents.utils.CustomAppGlideModule : appGlideModule
+  com.bumptech.glide.GeneratedRequestManagerFactory .up.|> com.bumptech.glide.manager.RequestManagerRetriever.RequestManagerFactory
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

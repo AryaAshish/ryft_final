@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_input_in_frsa"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:background="@drawable/linear_layout_in_activity_first_run_second_background">
+
+    <EditText
+        android:id="@+id/editText_skill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="15dp"
+        android:textSize="15dp"
+        android:layout_centerVertical="true"
+        android:hint="Skills"/>
+
+</RelativeLayout>
